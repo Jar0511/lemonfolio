@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!--오픈그래프-->
@@ -7,12 +8,16 @@
     <meta property="og:url" content="https://jar0511.github.io/lemonfolio/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="lemon-folio">
-    <meta property="og:description" content="상큼한 포트폴리오 구경오세요">
+    <meta property="og:description" content="정아름의 상큼한 포트폴리오">
     <meta property="og:image" content="1200*630px로 이미지제작">
     <!--//오픈그래프-->
+    <!--뷰포트코드-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--//뷰포트코드-->
     <title>lemon-folio</title>
     <!--파비콘-->
-    <link href="" rel="shortcut icon">
+    <link href="images/main/lemon.ico" rel="shortcut icon">
     <!--//파비콘-->
     <!--폰트-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
@@ -20,38 +25,354 @@
     <!--css-->
     <link href="css/default.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
     <!--//css-->
     <!--jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--//jquery-->
+    <!--js_plugin-->
+    <script src="js/common.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/circle-progress.min.js"></script>
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <!--//js_plugin-->
 </head>
+
 <body>
     <div id="wrap">
-       <!--wrap-->
+        <!--wrap-->
         <header>
-            <div class="inner"></div>
+            <div class="inner">
+                <h1 class="logo tit"><a href="index.html">/*lemon-folio*/</a></h1>
+                <nav class="gnb">
+                    <ul>
+                        <li class="tit"><a href="#projects">&#60;projects&#62;</a></li>
+                        <li class="tit"><a href="#visual">&#60;visual&#62;</a></li>
+                        <li class="tit"><a href="#about">&#60;about&#62;</a></li>
+                    </ul>
+                </nav>
+                <nav class="m_gnb">
+                    <a href="#"><span class="blind">메뉴</span></a>
+                </nav>
+            </div>
         </header>
+        <!--m_menu-->
+        <div id="m_menu">
+            <ul>
+                <li class="tit"><a href="#projects">&#60;projects&#62;</a></li>
+                <li class="tit"><a href="#visual">&#60;visual&#62;</a></li>
+                <li class="tit"><a href="#about">&#60;about&#62;</a></li>
+            </ul>
+        </div>
+        <!--//m_menu-->
         <div id="content">
             <!--content-->
             <section id="projects">
                 <!--projects-->
-                <div class="inner"></div>
+                <h2 class="tit">&#60;&#47;projects&#62;</h2>
+                <ul class="list">
+                    <li class="likonic"><a href="#">
+                            <div class="thumnail">
+                                <div class="thum_bg">
+                                    <img src="images/main/img_logo_likonic.png" alt="라이코닉 로고">
+                                    <ul class="tool">
+                                        <li class="xd">
+                                            <i class="blind">XD</i>
+                                        </li>
+                                        <li class="ai">
+                                            <i class="blind">ILLUST</i>
+                                        </li>
+                                        <li class="ps">
+                                            <i class="blind">PHOTOSHOP</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="s_tit">
+                                <h3>LIKONIC</h3>
+                                <p class="category">BI, Web Design</p>
+                            </div>
+                            <p class="desc">디자인문구전문 편집숍 브랜드 &#60;라이코닉&#62;</p>
+                        </a>
+                    </li>
+                    <li class="app"><a href="#">
+                            <div class="thumnail">
+                                <div class="thum_bg">
+                                    <img src="images/main/img_logo_app.png" alt="안전신문고 로고">
+                                    <ul class="tool">
+                                        <li class="xd">
+                                            <i class="blind">XD</i>
+                                        </li>
+                                        <li class="ai">
+                                            <i class="blind">ILLUST</i>
+                                        </li>
+                                        <li class="ps">
+                                            <i class="blind">PHOTOSHOP</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="s_tit">
+                                <h3>안전신문고</h3>
+                                <p class="category">App Renewal</p>
+                            </div>
+                            <p class="desc">생활 속의 위협요소 신고 어플</p>
+                        </a>
+                    </li>
+                    <li class="gunhang"><a href="#">
+                            <div class="thumnail">
+                                <div class="thum_bg">
+                                    <img src="images/main/img_logo_gunhang.png" alt="진해군항제 로고">
+                                    <ul class="tool">
+                                        <li class="xd">
+                                            <i class="blind">XD</i>
+                                        </li>
+                                        <li class="ai">
+                                            <i class="blind">ILLUST</i>
+                                        </li>
+                                        <li class="ps">
+                                            <i class="blind">PHOTOSHOP</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="s_tit">
+                                <h3>진해군항제</h3>
+                                <p class="category">Responsive Web</p>
+                            </div>
+                            <p class="desc">진해군항제 홍보 페이지</p>
+                        </a>
+                    </li>
+                    <li class="kpa"><a href="#">
+                            <div class="thumnail">
+                                <div class="thum_bg">
+                                    <img src="images/main/img_logo_kpa.png" alt="한국심리학회 로고">
+                                    <ul class="tool">
+                                        <li class="xd">
+                                            <i class="blind">XD</i>
+                                        </li>
+                                        <li class="ai">
+                                            <i class="blind">ILLUST</i>
+                                        </li>
+                                        <li class="ps">
+                                            <i class="blind">PHOTOSHOP</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="s_tit">
+                                <h3>한국심리학회</h3>
+                                <p class="category">Blog</p>
+                            </div>
+                            <p class="desc">한국심리학회 블로그 페이지 및 컨텐츠</p>
+                        </a>
+                    </li>
+                </ul>
             </section>
             <!--//projects-->
             <section id="visual">
                 <!--visual-->
-                <div class="inner"></div>
+                <h2 class="tit">&#60;&#47;visual&#62;</h2>
+                <ul class="list"></ul>
             </section>
             <!--//visual-->
             <section id="about">
                 <!--about-->
-                <div class="inner"></div>
+                <h2 class="tit">&#60;&#47;about&#62;</h2>
+                <div class="box">
+                    <h3>정아름</h3>
+                    <ul class="desc">
+                        <li>1995.05.11.</li>
+                        <li>국립경상대학교(심리학과 전공) 졸업<br>부산 IT 교육센터 프론트엔드 디자인 교육과정 수료</li>
+                        <li>웹디자인 기능사(한국산업인력공단/2021.04.)</li>
+                    </ul>
+                </div>
+                <ul class="graph">
+                    <li class="adobe">
+                        <div class="li_bg">
+                            <div class="o">
+                                <div id="adobe"></div>
+                            </div>
+                            <div class="li_txt">
+                                <p>Adobe</p>
+                                <ul class="btn">
+                                    <li class="on"><a href="#">XD</a>
+                                    </li>
+                                    <li><a href="#">Illustrator</a>
+                                    </li>
+                                    <li><a href="#">Photoshop</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="web_coding">
+                        <div class="li_bg">
+                            <div class="o">
+                                <div id="web"></div>
+                            </div>
+                            <div class="li_txt">
+                                <p>Web Coding</p>
+                                <ul class="btn">
+                                    <li class="on"><a href="#">HTML5</a></li>
+                                    <li><a href="#">CSS3</a></li>
+                                    <li><a href="#">jQuery</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="ms_office">
+                        <div class="li_bg">
+                            <div class="o">
+                                <div id="ms"></div>
+                            </div>
+                            <div class="li_txt">
+                                <p>MS Office</p>
+                                <ul class="btn">
+                                    <li class="on"><a href="#">Word</a></li>
+                                    <li><a href="#">PowePoint</a></li>
+                                    <li><a href="#">Excel</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </section>
             <!--//about-->
         </div>
         <!--//content-->
-        <footer></footer>
+        <!--content_detail-->
+        <div id="content_detail">
+            <div class="right">
+                <i class="close"><span class="blind">닫기</span></i>
+                <ul class="tool">
+                    <li class="link"><a href="sub/likonic.html" target="_blank"><i class="blind">SEE</i></a>
+                    </li>
+                    <li class="xd">
+                        <i class="blind">XD</i>
+                    </li>
+                    <li class="ai">
+                        <i class="blind">ILLUST</i>
+                    </li>
+                    <li class="ps">
+                        <i class="blind">PHOTOSHOP</i>
+                    </li>
+                    <li class="reference"><a href="#"><i class="blind">REFERENCE</i></a></li>
+                    <li class="go_top"><a href="#"><i class="blind">Go_Top</i></a></li>
+                </ul>
+            </div>
+            <!--detail_bg-->
+            <div class="detail_bg">
+                <!--project_list-->
+                <ul class="project_list">
+                    <li class="likonic">
+                        <div class="left">
+                            <div class="txt_area">
+                                <ul class="switch">
+                                    <li class="on"><a href="#">BI</a></li>
+                                    <li><a href="#">Web</a></li>
+                                </ul>
+                                <h4>LIKONIC</h4>
+                                <p class="desc">2021.01.- 02.<br>디자인 문구 편집숍 브랜드 LIKONIC 구상 및 디자인</p>
+                            </div>
+                            <div class="photo">
+                                <img src="images/main/detail/styleguide-likonic_web.jpg" alt="라이코닉 웹 스타일가이드" class="web_styleguide">
+                                <img src="images/main/detail/styleguide-likonic_bi.jpg" alt="라이코닉 BI 스타일가이드" class="bi_styleguide on">
+                            </div>
+                            <div class="refrnce">
+                                <h5>Reference</h5>
+                                <h6>&#47;&#47;BI</h6>
+                                <ul>
+                                    <li>사무용품 mockup Designed by <a href="http://www.freepik.com" target="_blank">Freepik</a></li>
+                                    <li>휴대폰 케이스 mockup Designed by <a href="http://www.freepik.com" target="_blank">pmvchamara / Freepik</a></li>
+                                    <li>쇼핑백 mockup Designed by <a href="http://www.freepik.com" target="_blank">Freepik</a></li>
+                                    <li>상자 mockup Designed by <a href="http://www.freepik.com" target="_blank">Freepik</a></li>
+                                    <li>옥외간판 mockup Designed by <a href="http://www.freepik.com" target="_blank">rawpixel.com / Freepik</a></li>
+                                </ul>
+                                <h6>&#47;&#47;WEB</h6>
+                                <ul>
+                                    <li>데스크톱 mockup created by <a href="https://www.freepik.com/psd/mockup" target="_blank">ebhy</a></li>
+                                    <li>랩톱 mockup Designed by <a href="https://www.graphberry.com/" target="_blank">graphberry</a></li>
+                                </ul>
+                                <h6>&#47;&#47;IMAGES</h6>
+                                <p>비상업적 이용 가능한 무료 이미지 사용</p>
+                                <ul>
+                                    <li><a href="http://www.freepik.com" target="_blank">Freepik</a>의 무료 이미지</li>
+                                    <li><a href="https://unsplash.com/" target="_blank">Unsplash</a>의 무료 이미지</li>
+                                    <li><a href="https://artvee.com/" target="_blank">Artvee</a>의 저작권 만료 이미지</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="app">
+                        <div class="left">
+                            <div class="txt_area">
+                                <ul class="switch">
+                                    <li class="on"><a href="#">App</a></li>
+                                </ul>
+                                <h4>안전신문고</h4>
+                                <p class="desc">2021.03.<br>생활 속 위협요소 신고 어플 안전신문고 리뉴얼 작업</p>
+                            </div>
+                            <div class="photo">
+                                <img src="images/main/detail/styleguide-ahnjeon_app.jpg" alt="안전신문고 스타일가이드" class="on">
+                            </div>
+                            <div class="refrnce">
+                                <h5>Reference</h5>
+                                <h6>&#47;&#47;APP</h6>
+                                <ul>
+                                    <li>휴대폰 mockup 3종 Designed by <a href="http://www.freepik.com" target="_blank">rawpixel.com / Freepik</a></li>
+                                </ul>
+                                <h6>&#47;&#47;IMAGES</h6>
+                                <ul>
+                                    <li>차량 이미지 by <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+                                    <li>배경 이미지 by <a href="https://pixabay.com/ko/" target="_blank">Pixabay</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="gunhang">
+                        <div class="left">
+                            <div class="txt_area">
+                                <ul class="switch">
+                                    <li class="on"><a href="#">Responsive Web</a></li>
+                                </ul>
+                                <h4>진해군항제</h4>
+                                <p class="desc">2021.03.- 04.<br>반응형 웹으로서 지역 축제 '군항제' 홍보 페이지 디자인</p>
+                            </div>
+                            <div class="photo">
+                                <img src="images/main/detail/styleguide-gunhang_web.jpg" alt="진해군항제 스타일가이드" class="on">
+                            </div>
+                            <div class="refrnce">
+                                <h5>Reference</h5>
+                                <h6>&#47;&#47;WEB</h6>
+                                <ul>
+                                    <li>PC, 태블릿, 모바일 mockup Designed by <a href="http://www.pixeden.com" target="_blank">PIXEDEN</a></li>
+                                    <li>웹 화면 mockup Designed by <a href="http://www.freepik.com" target="_blank">Aleksandr_Samochernyi / Freepik</a></li>
+                                </ul>
+                                <h6>&#47;&#47;IMAGES</h6>
+                                <ul>
+                                    <li>군항제 이미지 by <a href="https://www.gettyimagesbank.com/" target="_blank">한국관광공사</a></li>
+                                    <li>벚꽃 이미지 by <a href="https://pixabay.com/ko/" target="_blank">Pixabay</a></li>
+                                    <li>개인 사진</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!--//project_list-->
+                <p class="copy">&#169; 2021. JAR all rights reserved</p>
+            </div>
+            <!--//detail_bg-->
+        </div>
+        <!--//content_detail-->
+        <footer>
+            <p>&#169; 2021. JAR all rights reserved</p>
+        </footer>
     </div>
     <!--//wrap-->
-</body>
-</html>
+</body></html>
