@@ -18,6 +18,7 @@
     <title>lemon-folio</title>
     <!--파비콘-->
     <link href="images/main/lemon.ico" rel="shortcut icon">
+    <link href="images/main/lemon.ico" rel="icon">
     <!--//파비콘-->
     <!--폰트-->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
@@ -31,9 +32,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--//jquery-->
     <!--js_plugin-->
-    <script src="js/common.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="js/circle-progress.min.js"></script>
+    <script src="js/common.js"></script>
     <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
     <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
     <!--[if lt IE 9]>
@@ -79,7 +80,7 @@
                     <li class="likonic"><a href="#">
                             <div class="thumnail">
                                 <div class="thum_bg">
-                                    <img src="images/main/img_logo_likonic.png" alt="라이코닉 로고">
+                                    <img src="images/main/thumnail/img_logo_likonic.png" alt="라이코닉 로고">
                                     <ul class="tool">
                                         <li class="xd">
                                             <i class="blind">XD</i>
@@ -103,7 +104,7 @@
                     <li class="app"><a href="#">
                             <div class="thumnail">
                                 <div class="thum_bg">
-                                    <img src="images/main/img_logo_app.png" alt="안전신문고 로고">
+                                    <img src="images/main/thumnail/img_logo_app.png" alt="안전신문고 로고">
                                     <ul class="tool">
                                         <li class="xd">
                                             <i class="blind">XD</i>
@@ -127,7 +128,7 @@
                     <li class="gunhang"><a href="#">
                             <div class="thumnail">
                                 <div class="thum_bg">
-                                    <img src="images/main/img_logo_gunhang.png" alt="진해군항제 로고">
+                                    <img src="images/main/thumnail/img_logo_gunhang.png" alt="진해군항제 로고">
                                     <ul class="tool">
                                         <li class="xd">
                                             <i class="blind">XD</i>
@@ -151,7 +152,7 @@
                     <li class="kpa"><a href="#">
                             <div class="thumnail">
                                 <div class="thum_bg">
-                                    <img src="images/main/img_logo_kpa.png" alt="한국심리학회 로고">
+                                    <img src="images/main/thumnail/img_logo_kpa.png" alt="한국심리학회 로고">
                                     <ul class="tool">
                                         <li class="xd">
                                             <i class="blind">XD</i>
@@ -178,7 +179,30 @@
             <section id="visual">
                 <!--visual-->
                 <h2 class="tit">&#60;&#47;visual&#62;</h2>
-                <ul class="list"></ul>
+                <ul class="list">
+                    <li class="plastic"><a href="#">
+                        <div class="thumnail">
+                            <div class="thum_bg">
+                                <ul class="tool">
+                                        <li class="xd">
+                                            <i class="blind">XD</i>
+                                        </li>
+                                        <li class="ai">
+                                            <i class="blind">ILLUST</i>
+                                        </li>
+                                        <li class="ps">
+                                            <i class="blind">PHOTOSHOP</i>
+                                        </li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <div class="s_tit">
+                            <h3>PLASTIC LIFE</h3>
+                            <p class="category">Leaflet</p>
+                        </div>
+                        <p class="desc">리플렛 디자인</p>
+                    </a></li>
+                </ul>
             </section>
             <!--//visual-->
             <section id="about">
@@ -251,8 +275,6 @@
             <div class="right">
                 <i class="close"><span class="blind">닫기</span></i>
                 <ul class="tool">
-                    <li class="link"><a href="sub/likonic.html" target="_blank"><i class="blind">SEE</i></a>
-                    </li>
                     <li class="xd">
                         <i class="blind">XD</i>
                     </li>
@@ -263,8 +285,8 @@
                         <i class="blind">PHOTOSHOP</i>
                     </li>
                     <li class="reference"><a href="#"><i class="blind">REFERENCE</i></a></li>
-                    <li class="go_top"><a href="#"><i class="blind">Go_Top</i></a></li>
                 </ul>
+                <i class="go_top"><a href="#"><span class="blind">Go_Top</span></a></i>
             </div>
             <!--detail_bg-->
             <div class="detail_bg">
@@ -277,8 +299,8 @@
                                     <li class="on"><a href="#">BI</a></li>
                                     <li><a href="#">Web</a></li>
                                 </ul>
-                                <h4>LIKONIC</h4>
-                                <p class="desc">2021.01.- 02.<br>디자인 문구 편집숍 브랜드 LIKONIC 구상 및 디자인</p>
+                                <h4>LIKONIC<i class="link"><a href="sub/likonic.html" target="_blank"><span class="blind">go</span></a></i></h4>
+                                <p class="desc">개인작업, 2021.01.- 02.<br>디자인 문구 편집숍 브랜드 LIKONIC 구상 및 디자인</p>
                             </div>
                             <div class="photo">
                                 <img src="images/main/detail/styleguide-likonic_web.jpg" alt="라이코닉 웹 스타일가이드" class="web_styleguide">
@@ -316,7 +338,7 @@
                                     <li class="on"><a href="#">App</a></li>
                                 </ul>
                                 <h4>안전신문고</h4>
-                                <p class="desc">2021.03.<br>생활 속 위협요소 신고 어플 안전신문고 리뉴얼 작업</p>
+                                <p class="desc">개인작업, 2021.03.<br>생활 속 위협요소 신고 어플 안전신문고 리뉴얼 작업</p>
                             </div>
                             <div class="photo">
                                 <img src="images/main/detail/styleguide-ahnjeon_app.jpg" alt="안전신문고 스타일가이드" class="on">
@@ -341,8 +363,8 @@
                                 <ul class="switch">
                                     <li class="on"><a href="#">Responsive Web</a></li>
                                 </ul>
-                                <h4>진해군항제</h4>
-                                <p class="desc">2021.03.- 04.<br>반응형 웹으로서 지역 축제 '군항제' 홍보 페이지 디자인</p>
+                                <h4>진해군항제<i class="link"><a href="sub/gunhangje.html" target="_blank"><span class="blind">go</span></a></i></h4>
+                                <p class="desc">개인작업, 2021.03.- 04.<br>반응형 웹으로서 지역 축제 '군항제' 홍보 페이지 디자인</p>
                             </div>
                             <div class="photo">
                                 <img src="images/main/detail/styleguide-gunhang_web.jpg" alt="진해군항제 스타일가이드" class="on">
@@ -359,6 +381,62 @@
                                     <li>군항제 이미지 by <a href="https://www.gettyimagesbank.com/" target="_blank">한국관광공사</a></li>
                                     <li>벚꽃 이미지 by <a href="https://pixabay.com/ko/" target="_blank">Pixabay</a></li>
                                     <li>개인 사진</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="blog">
+                        <div class="left">
+                            <div class="txt_area">
+                                <ul class="switch">
+                                    <li class="on"><a href="#">Blog</a></li>
+                                </ul>
+                                <h4>한국심리학회<i class="link"><a href="https://blog.naver.com/spdlqjtoqmffhrm" target="_blank"><span class="blind">go</span></a></i></h4>
+                                <p class="desc">개인작업, 2021.04.- 05.<br>한국심리학회 블로그 스킨 디자인 및 컨텐츠 제작</p>
+                            </div>
+                            <div class="photo">
+                                <img src="images/main/detail/styleguide-kpa_blog.jpg" alt="한국심리학회 블로그 스타일가이드" class="on">
+                            </div>
+                            <div class="refrnce">
+                                <h5>Reference</h5>
+                                <h6>&#47;&#47;BLOG</h6>
+                                <ul>
+                                    <li>데스크톱 mockup Designed by <a href="http://www.freepik.com" target="_blank">ebhy / freepik.com</a></li>
+                                    <li>휴대폰 mockup Designed by <a href="https://www.ls.graphics/devices-mockups" target="_blank">ls.graphics</a></li>
+                                </ul>
+                                <h6>&#47;&#47;IMAGES</h6>
+                                <ul>
+                                    <li><a href="https://pixabay.com/ko/" target="_blank">Pixabay</a>의 무료 이미지</li>
+                                </ul>
+                                <p>컨텐츠의 내용물에 대한 저작권은 저작권자에게 있음.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="plastic">
+                        <div class="left">
+                            <div class="txt_area">
+                                <ul class="switch">
+                                    <li class="on"><a href="#">Leaflet</a></li>
+                                </ul>
+                                <h4>플라스틱 라이프 리플렛</h4>
+                                <p class="desc">개인작업, 2021.05.<br>플라스틱 재활용 문제 인식 캠페인 홍보용 리플렛 작업</p>
+                            </div>
+                            <div class="photo">
+                                <img src="images/main/detail/styleguide-plastic_leaflet.jpg" alt="플라스틱 리플릿 스타일가이드" class="on">
+                            </div>
+                            <div class="refrnce">
+                                <h5>Reference</h5>
+                                <h6>&#47;&#47;LEAFLET</h6>
+                                <ul>
+                                    <li>비닐 얹은 종이 mockup 3종 Designed by <a href="https://www.ls.graphics/free/paper-mockup?status=accepted&expires=1626049129&p_sid=15046&p_aid=52375&p_link=2486&p_tok=a19d465d-618a-4df8-9584-30cc68657d67" target="_blank">ls.graphics</a></li>
+                                    <li>a4 mockup Designed by <a href="https://www.freepik.com/psd/business" target="_blank">xvector / freepik</a></li>
+                                </ul>
+                                <h6>&#47;&#47;IMAGES</h6>
+                                <ul>
+                                    <li>재활용심벌 by <a href="https://www.keco.or.kr/kr/main/index.do" target="_blank">한국환경공단</a></li>
+                                    <li>하수구 by <a href="https://pixabay.com/ko/" target="_blank">Pixabay</a></li>
+                                    <li>테이프, 공병 by <a href="http://www.freepik.com" target="_blank">Freepik</a></li>
+                                    <li>칫솔 by <a href="https://www.pngarts.com/" target="_blank">PNG ART</a></li>
                                 </ul>
                             </div>
                         </div>

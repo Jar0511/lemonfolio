@@ -9,27 +9,16 @@ $(document).ready(function(){
         $('#m_menu').slideUp();
     });
     //mobile_projects
-    $('#projects>.list').slick({
-        responsive: [
-            {
-                breakpoint: 1920,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 1024,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    centerMode: true,
-                    slidesToShow: 1,
-                    arrows: false,
-                    centerPadding: '10%',
-                }
-            }
-        ]
-    });
+    if($(window).width() < 768){
+        $('#content .list').bxSlider({
+            minSlides: 2,
+            maxSlides: 3,
+            moveSlides: 1,
+            pager: false,
+            touchEnabled: (navigator.maxTouchPoints > 0)
+        });
+    }
+    
     //tools
     $('.tool').css('top','-200px');
     $('#content .list > li').mouseenter(function(){
@@ -183,32 +172,30 @@ $(document).ready(function(){
     });
     });
     
-    $('#about>.graph').slick({
-        responsive: [
-            {
-                breakpoint: 1920,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 1024,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    centerMode: true,
-                    slidesToShow: 1,
-                    arrows: false,
-                    centerPadding: '10%',
-                }
-            }
-        ]
-    });
+    if($(window).width() < 768){
+        $('#content .graph').bxSlider({
+            minSlides: 1,
+            maxSlides: 1,
+            moveSlides: 1,
+            pager: true,
+            controls: false,
+            touchEnabled: (navigator.maxTouchPoints > 0)
+        });
+    }
     
     //content_detail
     $('#content_detail').hide();
     $('#content .list > li').click(function(){
         event.preventDefault();
+        $('#content_detail').show();
+        $('body').css({"overflow":"hidden", "height":"100%"});
+    });
+    $('#content .list > li').on('click', function(){
+        $('#content_detail').show();
+        $('body').css({"overflow":"hidden", "height":"100%"});
+    });
+    
+    $('#content .list').on('click', '> li', function(){
         $('#content_detail').show();
         $('body').css({"overflow":"hidden", "height":"100%"});
     });
@@ -224,6 +211,14 @@ $(document).ready(function(){
         $('#content_detail .project_list li.gunhang').addClass('now');
         $('#content_detail .project_list li.gunhang').siblings().removeClass('now');
     });
+    $('#content .list > li.kpa').click(function(){
+        $('#content_detail .project_list li.blog').addClass('now');
+        $('#content_detail .project_list li.blog').siblings().removeClass('now');
+    });
+    $('#content .list > li.plastic').click(function(){
+        $('#content_detail .project_list li.plastic').addClass('now');
+        $('#content_detail .project_list li.plastic').siblings().removeClass('now');
+    });
     $('#content_detail img').click(function(){
         $(this).parent('li').scrollTop(0);
     });
@@ -235,19 +230,7 @@ $(document).ready(function(){
         $('#content_detail').hide();
         $('body').css({"overflow-y":"scroll", "height":"auto"});
     });
-    
-    if ($('#content_detail .project_list li.likonic').hasClass('now')){
-        $('#content_detail .right li.link a').attr('href','sub/likonic.html');
-    } else if ($('#content_detail .project_list li.app').hasClass('now')){
-        $('#content_detail .right li.link a').attr('#');
-        $('#content_detail .right li.link').hide();
-    } else if ($('#content_detail .project_list li.gunhang').hasClass('now')){
-        $('#content_detail .right li.link a').attr('href','sub/gunhangje.html');
-    } else if ($('#content_detail .project_list li.blog').hasClass('now')){
-        $('#content_detail .right li.link a').attr('href','https://blog.naver.com/spdlqjtoqmffhrm');
-    }
-    
-    $('#content_detail .right li.go_top').click(function(){
+    $('#content_detail .right i.go_top').click(function(){
         $('#content_detail .detail_bg').scrollTop(0);
     });
     
