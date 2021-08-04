@@ -632,6 +632,8 @@ header .m_gnb {
     position: absolute;
     bottom: 10%;
     left: 0;
+    cursor: pointer;
+    z-index: 8;
 }
 
 #content_detail .project_list .txt_area h4 i.link:after {
@@ -645,12 +647,15 @@ header .m_gnb {
     position: absolute;
     bottom: 10%;
     left: 24%;
+    cursor: pointer;
+    z-index: 8;
 }
 
 #content_detail .project_list .txt_area h4 i.link a {
     display: block;
     width: 100%;
     height: 100%;
+    z-index: 9;
 }
 
 #content_detail .project_list .txt_area .desc {
